@@ -1,7 +1,7 @@
 
 # File Orderer V3
 
-A python script that automatically organizes files into folders based on their extension. This project is the third iteration of my file organizer. Unlike the original version build with `os` and `shutil` and the second version build with `pathlib`, this version uses `typer` for cleaner and more modern file management. 
+A python script that automatically organizes files into folders based on their extension. This project is the third iteration of my file organizer. Unlike the original version build with `os` and `shutil` and the second version build only using `pathlib`, this new version uses `typer` with `pathlib` for cleaner and more modern file management. 
 ---
 
 ## Features
@@ -15,9 +15,10 @@ A python script that automatically organizes files into folders based on their e
 
 ## Tech Stack
 
-* Python 3
-* typer
+* Python 3.14
 * pathlib
+* typer
+* pytest
 
 ---
 
@@ -32,13 +33,64 @@ cd files_orderer_v3
 
 ---
 
+## Create environment and install dependencies:
+
+### Using uv
+
+```bash
+# Create environment with uv
+uv venv
+```
+
+```bash
+# Use uv to install dependencies
+uv pip install -r requirements.txt
+```
+
+### Using pip
+
+```bash
+# Create environment with pip in windows
+python -m venv venv
+```
+
+```bash
+# Create environment with pip in linux/macOS
+python3 -m venv venv
+```
+
+```bash
+# Use pip to install dependencies
+pip install -r requirements.txt
+```
+
+---
+
 ## Usage
 
 Run the project:
 
 ```bash
+# Run the application in windows
+# Add your directory path directly as an argument
+python main.py /home/user/downloads
+```
+
+```bash
+# Run the application in Linux/MacOS
 # Add your directory path directly as an argument
 python3 main.py /home/user/downloads
+```
+
+---
+
+## Testing
+
+Run the tests:
+
+```bash
+# Run the tests
+pytest
 ```
 
 ---
